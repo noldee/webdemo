@@ -1,17 +1,102 @@
 ---
-
+import { stacksProject } from "../data/stack";
+import MainLayout from "../layouts/MainLayout.astro";
+import CardProject from "../components/CardProject.astro";
+import { projects } from "../data/data";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+  title="Proyectos en HTML & CSS — Walter"
+  description="Colección de maquetaciones y proyectos hechos con HTML y CSS."
+>
+  <section class="px-4 pt-24 pb-16 text-center">
+    <span
+      class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1 text-sm font-medium text-slate-600 mb-8 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:shadow-none"
+    >
+      Portafolio de práctica
+    </span>
+
+    <div class="relative inline-block">
+      <h1
+        class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.1] dark:text-white"
+      >
+        Proyectos hechos en
+        <br class="hidden sm:block" />
+        <span class="relative inline-block">
+          HTML
+          <svg
+            class="absolute left-0 -bottom-1 w-full h-3 text-indigo-400 dark:text-indigo-300"
+            viewBox="0 0 200 12"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <path
+              d="M2 9 Q 50 1 100 7 T 198 5"
+              stroke="currentColor"
+              stroke-width="6"
+              stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="text-slate-900 dark:text-white">&amp;</span>
+        <span
+          class="relative inline-block text-transparent bg-gradient-to-r from-indigo-500 to-cyan-400 dark:from-indigo-400 dark:to-cyan-300 bg-clip-text"
+        >
+          CSS
+          <svg
+            class="absolute left-0 -bottom-1 w-full h-3 text-cyan-400 dark:text-cyan-300"
+            viewBox="0 0 200 12"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <path
+              d="M2 9 Q 50 1 100 7 T 198 5"
+              stroke="currentColor"
+              stroke-width="6"
+              stroke-linecap="round"></path>
+          </svg>
+        </span>
+      </h1>
+
+      <span
+        class="font-hand hidden sm:block absolute -top-2 -right-24 rotate-[-8deg] text-2xl text-rose-500 dark:text-rose-400"
+      >
+        ¡hecho a mano! ✍️
+      </span>
+    </div>
+
+    <p
+      class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8 mt-6 dark:text-slate-400"
+    >
+      Esta colección reúne maquetaciones y proyectos desarrollados
+      <mark
+        class="bg-yellow-200/70 text-slate-900 px-1 rounded-sm dark:bg-yellow-400/20 dark:text-yellow-200"
+      >
+        practicando a fondo con HTML y CSS
+      </mark>
+      , usando además:
+    </p>
+
+    <ul class="flex flex-wrap justify-center gap-3">
+      {
+        stacksProject.map((stack) => (
+          <li class="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:shadow-none">
+            {stack.name}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-24">
+    {projects.map((project) => <CardProject {...project} />)}
+
+    <div
+      class="flex items-center justify-center rounded-2xl aspect-square sm:aspect-auto min-h-[280px] p-6 dark:border-slate-800"
+    >
+      <p
+        class="font-hand text-3xl sm:text-4xl text-rose-500 dark:text-rose-400 -rotate-12 text-center leading-snug"
+      >
+        ¡Muy pronto,<br />más proyectos! ✨
+      </p>
+    </div>
+  </section>
+</MainLayout>
