@@ -81,4 +81,14 @@ export const projects: Project[] = [
       "https://github.com/noldee/proyectos-html-css/tree/main/07-PodcastApp",
     stack: scssStack,
   },
+  {
+    title: "Barbie Page",
+    description:
+      "Landing temática de Barbie con maquetación de imágenes y estilos personalizados.",
+    image: "/projects/08-barbiepage.png",
+    demoUrl: "https://barbiepagee.netlify.app/",
+    repoUrl:
+      "https://github.com/noldee/proyectos-html-css/tree/main/08-BarbiePage",
+    stack: bemStack,
+  },
 ];

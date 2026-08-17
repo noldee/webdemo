@@ -6,26 +6,26 @@ import { projects } from "../data/data";
 ---
 
 <MainLayout
-  title="Proyectos en HTML & CSS — Walter"
+  title="Proyectos en HTML & CSS "
   description="Colección de maquetaciones y proyectos hechos con HTML y CSS."
 >
   <section class="px-4 pt-24 pb-16 text-center">
     <span
-      class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1 text-sm font-medium text-slate-600 mb-8 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:shadow-none"
+      class="inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-4 py-1 text-sm font-medium text-slate-600 mb-8 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/60 dark:text-zinc-300 dark:shadow-none"
     >
       Portafolio de práctica
     </span>
 
     <div class="relative inline-block">
       <h1
-        class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.1] dark:text-white"
+        class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.1] text-slate-900 dark:text-zinc-100"
       >
         Proyectos hechos en
         <br class="hidden sm:block" />
         <span class="relative inline-block">
           HTML
           <svg
-            class="absolute left-0 -bottom-1 w-full h-3 text-indigo-400 dark:text-indigo-300"
+            class="absolute left-0 -bottom-1 w-full h-3 text-sky-500/70 dark:text-sky-400"
             viewBox="0 0 200 12"
             preserveAspectRatio="none"
             fill="none"
@@ -37,13 +37,13 @@ import { projects } from "../data/data";
               stroke-linecap="round"></path>
           </svg>
         </span>
-        <span class="text-slate-900 dark:text-white">&amp;</span>
+        <span class="text-slate-900 dark:text-zinc-100">&amp;</span>
         <span
-          class="relative inline-block text-transparent bg-gradient-to-r from-indigo-500 to-cyan-400 dark:from-indigo-400 dark:to-cyan-300 bg-clip-text"
+          class="relative inline-block text-transparent bg-gradient-to-r from-sky-500 to-indigo-500 dark:from-sky-300 dark:to-indigo-300 bg-clip-text"
         >
           CSS
           <svg
-            class="absolute left-0 -bottom-1 w-full h-3 text-cyan-400 dark:text-cyan-300"
+            class="absolute left-0 -bottom-1 w-full h-3 text-indigo-500/70 dark:text-indigo-400"
             viewBox="0 0 200 12"
             preserveAspectRatio="none"
             fill="none"
@@ -65,11 +65,11 @@ import { projects } from "../data/data";
     </div>
 
     <p
-      class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8 mt-6 dark:text-slate-400"
+      class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8 mt-6 dark:text-zinc-400"
     >
       Esta colección reúne maquetaciones y proyectos desarrollados
       <mark
-        class="bg-yellow-200/70 text-slate-900 px-1 rounded-sm dark:bg-yellow-400/20 dark:text-yellow-200"
+        class="bg-sky-500/10 text-sky-900 px-1 rounded-sm dark:bg-sky-400/10 dark:text-sky-300 dark:border dark:border-sky-500/20"
       >
         practicando a fondo con HTML y CSS
       </mark>
@@ -79,7 +79,7 @@ import { projects } from "../data/data";
     <ul class="flex flex-wrap justify-center gap-3">
       {
         stacksProject.map((stack) => (
-          <li class="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:shadow-none">
+          <li class="rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/60 dark:text-zinc-300 dark:shadow-none">
             {stack.name}
           </li>
         ))
